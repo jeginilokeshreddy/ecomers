@@ -15,10 +15,16 @@ const Array1 = () => {
   ])
   const [newarraycreate,setnewarraycreate]=useState([])
   const removevalue=(indexno)=>{
-              debugger
-              setnewarraycreate((prev)=>{
-                return [...prev,arraydata[indexno]]
-              })
+             
+    // arraydata.filter((item,index)=>{
+    //          return indexno !==index
+    // })
+              // setnewarraycreate((prev)=>{
+              //   return [...prev,arraydata[indexno]]
+              // })
+              setArrraydata(arraydata.filter((item,index)=>{
+                return indexno !==index
+       }))      
   }
 
   return (
