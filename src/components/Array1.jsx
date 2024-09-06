@@ -16,15 +16,24 @@ const Array1 = () => {
   const [newarraycreate,setnewarraycreate]=useState([])
   const removevalue=(indexno)=>{
              
-    // arraydata.filter((item,index)=>{
-    //          return indexno !==index
-    // })
-              // setnewarraycreate((prev)=>{
-              //   return [...prev,arraydata[indexno]]
-              // })
               setArrraydata(arraydata.filter((item,index)=>{
                 return indexno !==index
        }))      
+
+    //for every call back backfunction we will give one retun keyword
+    //arraydata.filter
+    //
+  //     setnewarraycreate((prev)=>{
+  //       return [...prev,arraydata.filter((item,index)=>{
+  //         return indexno == index
+  // })]
+  //      }) 
+  setnewarraycreate((prev)=>{
+    debugger
+    return [...prev,...arraydata.filter((item,index)=>{
+      return indexno == index
+})]
+   }) 
   }
 
   return (
@@ -49,7 +58,7 @@ const Array1 = () => {
       </ul>
       <h2>new array</h2>
       {(newarraycreate.length !==0) ?newarraycreate.map((item)=>{
-  return <p style={{marginLeft:"20px"}}> {item.name} - Value: {item.value}</p>
+  return <p style={{marginLeft:"20px"}}> {item.name} - {item.value}</p>
   
    }):<h1>nodata</h1>}
    
