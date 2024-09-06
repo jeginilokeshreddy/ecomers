@@ -19,21 +19,27 @@ const Array1 = () => {
               setArrraydata(arraydata.filter((item,index)=>{
                 return indexno !==index
        }))      
-
-    //for every call back backfunction we will give one retun keyword
-    //arraydata.filter
-    //
-  //     setnewarraycreate((prev)=>{
-  //       return [...prev,arraydata.filter((item,index)=>{
-  //         return indexno == index
-  // })]
-  //      }) 
   setnewarraycreate((prev)=>{
     debugger
     return [...prev,...arraydata.filter((item,index)=>{
       return indexno == index
 })]
    }) 
+  }
+  const Addback=(index,id)=>{
+  
+    let newitem=newarraycreate[index]
+    const indexToInsert = arraydata.findIndex(item => item.id > newitem.id);
+    if (indexToInsert !== -1){
+       let backuparrya=[...arraydata]
+       let details=backuparrya.splice(indexToInsert,0,newitem)
+      setArrraydata(backuparrya)
+    }
+    
+    setnewarraycreate(newarraycreate.filter((item,indexid)=>{
+      return indexid!==index
+    }))
+
   }
 
   return (
@@ -57,14 +63,16 @@ const Array1 = () => {
         )}
       </ul>
       <h2>new array</h2>
-      {(newarraycreate.length !==0) ?newarraycreate.map((item)=>{
-  return <p style={{marginLeft:"20px"}}> {item.name} - {item.value}</p>
+      {(newarraycreate.length !==0) ?newarraycreate.map((item,index)=>{
+  return <><p style={{marginLeft:"20px"}}> {item.name} - {item.value}</p>
+  
+  <button  onClick={()=>{
+      Addback(index)
+   }}>Addback</button></>
   
    }):<h1>nodata</h1>}
    
-   <button onClick={(e)=>{
-    
-   }}>Addback</button>
+  
     </div>
   );
 };
