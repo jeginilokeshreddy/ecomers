@@ -26,15 +26,19 @@ const Array1 = () => {
 })]
    }) 
   }
+  // hoew to uneratand code why they are calling thus normalizeSearch
+  //now understaimg flow
+  //what they arr calling wat it is diun every statement
+  //variable manipulation
   const Addback=(index,id)=>{
-  
-    let newitem=newarraycreate[index]
+    
+    let newitem=newarraycreate[index] //here we are manipulating varible which dara we are manipulate by uding ui or (values) we image this value not nsme
     const indexToInsert = arraydata.findIndex(item => item.id > newitem.id);
     if (indexToInsert !== -1){
-       let backuparrya=[...arraydata]
-       let details=backuparrya.splice(indexToInsert,0,newitem)
-      setArrraydata(backuparrya)
-    }
+       let backuparrya=[...arraydata] //array vs arra manipulation
+       let details=backuparrya.splice(indexToInsert,0,newitem) //sinle name
+      setArrraydata(backuparrya) //manipulation with special symbols
+    } //varible with special characters(varizble  value msinpulation)
     
     setnewarraycreate(newarraycreate.filter((item,indexid)=>{
       return indexid!==index
