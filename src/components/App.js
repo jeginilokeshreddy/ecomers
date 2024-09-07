@@ -4,7 +4,7 @@ import  "./App.scss"
 
 export default function App() {
   return (
-    <div className='header'>
+    <div className='App-section mx-2'>
       <Header/>
     </div>
   )

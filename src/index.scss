@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+
+
+*,ul{
+margin: 0px;
+padding: 0px;
+font-family: "Roboto Serif", serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+/* specity for speci name from the common name  */
+/* for making constiency values on all the pages to the properties we use desing sysystem */
+/* design system */
+/* we can call this names and pass to ye selector avina array object[{},{}] */
+
+    $obj-bg-color: #1e90ff;
+    $obj-value-bg-color: #ffffff;
+    $anchor-font-size:18px;
+    $text-color:#49557e;
+
+   
+
+/* propery value to which elment */

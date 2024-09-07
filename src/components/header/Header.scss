@@ -1,0 +1,28 @@
+@import "../../index.scss";
+
+.header-componet{
+    width: 100%;
+    .nav-section{
+        width: 100%;
+        padding: 16px 0px;
+    }
+    li{
+        color: #49557e;
+       
+            font-size:  $anchor-font-size;
+        
+    }
+    .navlog-image{
+      width:150px;
+    }
+    .nav-icon-section {
+       img{
+        width: 24px;
+        height: 24px;
+       }
+      
+    }
+}
+
+
+//what are the styles we will pass to the section elment s what are the styles we will pass to the output daiplay elments

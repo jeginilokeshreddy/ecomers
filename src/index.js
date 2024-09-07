@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 //-----------------external css file
-import './index.css';
+import './index.scss';
 //---------------external componets
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
