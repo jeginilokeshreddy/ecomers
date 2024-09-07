@@ -1,12 +1,12 @@
-import './App.css';
+import React ,{useState}from 'react'
+import He,{data} from "./header/Header"
+import  "./App.scss"
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <button class="btn btn-primary">Primary  Button .git adding agin ccfor fit flow aa jegini lokesh new brack</button>
-
+    <div className='header'>
+      <He/>
+      <h1>{data}</h1>
     </div>
-  );
+  )
 }
-
-export default App;
